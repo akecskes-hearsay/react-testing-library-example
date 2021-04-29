@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders App component then logs out - with regular snapshots 1`] = `
+<div>
+  <div>
+    <p>
+      Signed in as 
+      Admin
+    </p>
+    <button
+      id="button-logout"
+    >
+      Logout
+    </button>
+  </div>
+</div>
+`;
+
+exports[`App renders App component then logs out - with regular snapshots 2`] = `
+<div>
+  <div>
+    <button
+      id="button-login"
+    >
+      Login
+    </button>
+  </div>
+</div>
+`;
+
+exports[`App renders App component then logs out - with regular snapshots 3`] = `
+<div>
+  <div>
+    <p>
+      Signed in as 
+      Admin
+    </p>
+    <button
+      id="button-logout"
+    >
+      Logout
+    </button>
+  </div>
+</div>
+`;
+
+exports[`App renders App component then logs out - with snapshot diffs 1`] = `
+<div>
+  <div>
+    <p>
+      Signed in as 
+      Admin
+    </p>
+    <button
+      id="button-logout"
+    >
+      Logout
+    </button>
+  </div>
+</div>
+`;
+
+exports[`App renders App component then logs out - with snapshot diffs 2`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+  <div>
+    <div>
+-     <p>
+-       Signed in as 
+-       Admin
+-     </p>
+      <button
+-       id=\\"button-logout\\"
++       id=\\"button-login\\"
+      >
+-       Logout
++       Login
+      </button>
+    </div>
+  </div>"
+`;
+
+exports[`App renders App component then logs out - with snapshot diffs 3`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+  <div>
+    <div>
++     <p>
++       Signed in as 
++       Admin
++     </p>
+      <button
+-       id=\\"button-login\\"
++       id=\\"button-logout\\"
+      >
+-       Login
++       Logout
+      </button>
+    </div>
+  </div>"
+`;
+
+exports[`App renders App component then tests snapshot that succeeds without error 1`] = `
+<div>
+  <div>
+    <p>
+      Signed in as 
+      Admin
+    </p>
+    <button
+      id="button-logout"
+    >
+      Logout
+    </button>
+  </div>
+</div>
+`;

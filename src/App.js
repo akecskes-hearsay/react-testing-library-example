@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+function getUser() {
+    return Promise.resolve({id: '1', name: 'Admin'});
+}
+
+const App = () => {
+    const [user, setUser] = React.useState(null);
+
+    const loadUser = async () => {
+        const user = await getUser();
+        setUser(user);
+    };
+
+    React.useEffect(() => {
+        loadUser()
+    }, []);
+
+    if (user) {
+        return (
+            <div>
+                <p>Signed in as {user.name}</p>
+                <button
+                    id="button-logout"
+                    onClick={() => setUser(null)}
+                >
+                    Logout
+                </button>
+            </div>)
+    }
+
+    return <div>
+        <button
+            id="button-login"
+            onClick={loadUser}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            Login
+        </button>
+    </div>;
 }
 
 export default App;
